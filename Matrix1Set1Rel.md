@@ -1,16 +1,10 @@
-# DiscreteMathCodes
-Python Scripts for  implementing Discrete Math examples
-Aquí tienes la documentación en formato Markdown para incluir en tu repositorio de GitHub:  
-
----
-
 # Matriz de Adyacencia en Python
 
 Este repositorio contiene una implementación en Python para generar y visualizar una matriz de adyacencia a partir de un conjunto de nodos y sus relaciones.
 
 # Descripción
 
-El código permite representar grafos dirigidos mediante una matriz de adyacencia, útil para modelar conexiones entre elementos. Este repositorio contiene un script en Python para generar y visualizar una matriz de adyacencia a partir de un conjunto de elementos y sus relaciones. La matriz de adyacencia es una representación matricial de un grafo dirigido, donde los nodos son los elementos del conjunto y las aristas representan las relaciones entre ellos.
+El código permite representar grafos dirigidos mediante una matriz de adyacencia, útil para modelar conexiones entre elementos. La matriz de adyacencia es una representación matricial de un grafo dirigido, donde los nodos son los elementos del conjunto y las aristas representan las relaciones entre ellos.
 
 ## Estructura del Código
 
