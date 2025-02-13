@@ -46,6 +46,7 @@ Alicia       0           1           0
 Bruno        1           0           1    
 Carla        0           0           1    
 ```
+
 # Función para generar la matriz de adyacencia
 def generar_matriz_adyacencia(U, P, C):
     # Crear un diccionario para mapear los elementos de U y P a índices
@@ -88,8 +89,53 @@ matriz = generar_matriz_adyacencia(U, P, C)
 # Mostrar la matriz de adyacencia
 mostrar_matriz(matriz, U, P)
 
+## Código
+
+```python
+# Función para generar la matriz de adyacencia dados dos conjuntos y su relación
+def generar_matriz_adyacencia(U, P, C):
+    # Crear un diccionario para mapear los elementos de U y P a índices
+    index_U = {elemento: i for i, elemento in enumerate(U)}
+    index_P = {elemento: i for i, elemento in enumerate(P)}
+
+    # Crear una matriz de ceros con las dimensiones de U x P
+    matriz = [[0 for _ in range(len(P))] for _ in range(len(U))]
+
+    # Llenar la matriz con los valores de la relación C
+    for (u, p) in C:
+        if u in index_U and p in index_P:
+            matriz[index_U[u]][index_P[p]] = 1
+
+    return matriz
+
+# Función para mostrar la matriz de adyacencia de manera legible
+def mostrar_matriz(matriz, U, P):
+    # Mostrar las cabeceras de las columnas
+    print("    ", end="")
+    for p in P:
+        print(f"{p:12}", end="")
+    print()
+
+    # Mostrar las filas con las cabeceras de las filas (elementos de U)
+    for i, fila in enumerate(matriz):
+        print(f"{U[i]:<12}", end="")
+        for valor in fila:
+            print(f"{valor:12}", end="")
+        print()
+
+# Datos de prueba
+U = ["Alicia", "Bruno", "Carla"]
+P = ["Libro", "Laptop", "Teléfono"]
+C = {("Alicia", "Laptop"), ("Bruno", "Libro"), ("Carla", "Teléfono"), ("Bruno", "Teléfono")}
+
+# Generar la matriz de adyacencia
+matriz = generar_matriz_adyacencia(U, P, C)
+
+# Mostrar la matriz de adyacencia
+mostrar_matriz(matriz, U, P)
 
 
+```
 
 ## Aplicaciones
 - Representación de relaciones entre usuarios y productos.
