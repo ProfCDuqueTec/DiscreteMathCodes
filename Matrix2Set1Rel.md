@@ -1,4 +1,4 @@
-# Documentación: Generación y Visualización de Matriz de Adyacencia
+# Generación y Visualización de Matriz de Adyacencia
 
 # Descripción
 Este repositorio contiene un script en Python para generar y visualizar una matriz de adyacencia a partir de dos conjuntos de elementos y una relación entre ellos. La matriz de adyacencia es una representación tabular que indica las conexiones entre los elementos de los dos conjuntos dados.
@@ -48,6 +48,7 @@ Carla        0           0           1
 ```
 
 # Función para generar la matriz de adyacencia
+``` Python
 def generar_matriz_adyacencia(U, P, C):
     # Crear un diccionario para mapear los elementos de U y P a índices
     index_U = {elemento: i for i, elemento in enumerate(U)}
@@ -62,8 +63,10 @@ def generar_matriz_adyacencia(U, P, C):
             matriz[index_U[u]][index_P[p]] = 1
 
     return matriz
+```
 
 # Función para mostrar la matriz de adyacencia de manera legible
+``` Python
 def mostrar_matriz(matriz, U, P):
     # Mostrar las cabeceras de las columnas
     print("    ", end="")
@@ -77,6 +80,7 @@ def mostrar_matriz(matriz, U, P):
         for valor in fila:
             print(f"{valor:12}", end="")
         print()
+```
 
 # Datos de prueba
 U = ["Alicia", "Bruno", "Carla"]
